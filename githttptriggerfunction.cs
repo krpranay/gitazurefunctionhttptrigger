@@ -27,8 +27,8 @@ namespace gitazurefunctionhttptrigger
             name = name ?? data?.name;
             
             string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. Good to know that you are a {job} This HTTP triggered function executed successfully.";
+                ? "This HTTP triggered function executed successfully. Pass a name and job in the query string or in the request body for a personalized response."
+                : $"Hello, {name}. Good to know that you are a {job}. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
         }
